@@ -4,16 +4,18 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4D0JCJBKS"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments)}
+              gtag("js", new Date());
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4D0JCJBKS"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments)}
-  gtag("js", new Date());
-
-  gtag("config", "G-C4D0JCJBKS");
-</script>
-
+              gtag("config", "G-C4D0JCJBKS");
+            `
+          }}
+        />
         <meta
           name="description"
           content="Jano - Creative Multipurpose React NextJS Template"
@@ -24,8 +26,6 @@ export default function Document() {
         />
 
         <link rel="icon" href="/favicon.ico" />
-
-        
       </Head>
       <body>
         <Main />
