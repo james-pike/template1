@@ -14,7 +14,11 @@ import Footer from "../../components/home-page/home-10/Footer";
 import { useEffect } from 'react';
 import ReactGA from 'react-ga';
 
+
+
 const AgencyModern = () => {
+
+  
   useEffect(() => {
     // Crisp chat initialization script
     window.$crisp = [];
@@ -34,9 +38,25 @@ const AgencyModern = () => {
   }, []); // Run once when the component mounts
 
 
+
+  
   return (
+
+    
     <>
+
+    
       <Seo pageTitle="Agency Modern" />
+
+   
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C4D0JCJBKS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C4D0JCJBKS');
+</script>
       {/* <!-- 
         =============================================
         Theme Default Menu
