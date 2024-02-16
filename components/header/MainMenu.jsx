@@ -63,16 +63,9 @@ const MainMenu = () => {
           {/* End li (home mega menu) */}
 
           <li className="nav-item">
-  <a
-    href="/pages-menu/about-us-v3" // Change this to the actual URL of your about page
-    className={
-      isActive("/pages-menu/about-us-v3") // Assuming isActive is a function to check if the current page is the About page
-        ? "nav-link active-menu"
-        : "nav-link"
-    }
-  >
-    About
-  </a>
+          <Link href="/pages-menu/about-us-v3">
+        <a className="nav-link">About</a>
+      </Link>
 </li>
 
 
@@ -143,29 +136,19 @@ const MainMenu = () => {
           {/* End li (pages) */}
 
           <li className="nav-item">
-  <a
-    href="/blog/blog-v3" // Change this to the actual URL of your about page
-    className={
-      isActive("/about") // Assuming isActive is a function to check if the current page is the About page
-        ? "nav-link active-menu"
-        : "nav-link"
-    }
-  >
+          <Link href="/blog/blog-v3">
+  <a className={isActive("/about") ? "nav-link active-menu" : "nav-link"}>
     Blog
   </a>
+</Link>
 </li>
           {/* End li (blog) */}
           <li className="nav-item">
-  <a
-    href="/contact/contact-v2" // Change this to the actual URL of your contact page
-    className={
-      contactItems.some((elm) => isActive(elm.link))
-        ? "nav-link active-menu"
-        : "nav-link"
-    }
-  >
+          <Link href="/contact/contact-v2">
+  <a className={contactItems.some((elm) => isActive(elm.link)) ? "nav-link active-menu" : "nav-link"}>
     Contact
   </a>
+</Link>
 </li>
           {/* End li (contact) */}
         </ul>
