@@ -4,6 +4,16 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4D0JCJBKS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C4D0JCJBKS');
+</script>
+
         <meta
           name="description"
           content="Jano - Creative Multipurpose React NextJS Template"
