@@ -12,6 +12,7 @@ import FancyBanner from "../../components/home-page/home-10/FancyBanner";
 import CallToActions from "../../components/home-page/home-10/CallToActions";
 import Footer from "../../components/home-page/home-10/Footer";
 import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 const AgencyModern = () => {
   useEffect(() => {
@@ -25,6 +26,11 @@ const AgencyModern = () => {
       s.async = 1;
       d.getElementsByTagName("head")[0].appendChild(s);
     })();
+
+
+   // Track the page view using ReactGA
+   ReactGA.pageview(window.location.pathname + window.location.search);
+
   }, []); // Run once when the component mounts
 
 
